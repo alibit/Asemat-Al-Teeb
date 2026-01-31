@@ -1,0 +1,165 @@
+/* ===== RTL Support for Arabic Version ===== */
+
+/* --- Arabic Fonts --- */
+:root {
+  --font-display-ar: 'Cairo', 'Segoe UI', sans-serif;
+  --font-body-ar: 'IBM Plex Sans Arabic', 'Segoe UI', sans-serif;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-body-ar);
+}
+
+[dir="rtl"] .brand,
+[dir="rtl"] .section-title,
+[dir="rtl"] .hero-text h2,
+[dir="rtl"] .card-body h4,
+[dir="rtl"] .about-features strong,
+[dir="rtl"] .footer-brand-name {
+  font-family: var(--font-display-ar);
+}
+
+/* --- Header RTL --- */
+[dir="rtl"] .header-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav a::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .menu-toggle {
+  order: -1;
+}
+
+/* --- Hero RTL --- */
+[dir="rtl"] .hero-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-text {
+  text-align: right;
+}
+
+[dir="rtl"] .hero-cta {
+  justify-content: flex-start;
+}
+
+/* --- Cards RTL --- */
+[dir="rtl"] .card-badge {
+  left: auto;
+  right: 1rem;
+}
+
+[dir="rtl"] .card-body {
+  text-align: right;
+}
+
+[dir="rtl"] .card-footer {
+  flex-direction: row-reverse;
+}
+
+/* --- About RTL --- */
+[dir="rtl"] .about-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .about-content {
+  text-align: right;
+}
+
+[dir="rtl"] .about-features {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .about-features li {
+  text-align: center;
+}
+
+/* --- Contact Form RTL --- */
+[dir="rtl"] .contact-form {
+  text-align: right;
+}
+
+[dir="rtl"] .form-group label {
+  text-align: right;
+}
+
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .form-group input::placeholder,
+[dir="rtl"] .form-group textarea::placeholder {
+  text-align: right;
+}
+
+/* --- Footer RTL --- */
+[dir="rtl"] .footer-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-brand,
+[dir="rtl"] .footer-links,
+[dir="rtl"] .footer-contact {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-links a {
+  text-align: right;
+}
+
+/* --- Scroll to Top RTL --- */
+[dir="rtl"] .scroll-top {
+  right: auto;
+  left: 2rem;
+}
+
+/* --- Mobile Nav RTL --- */
+@media (max-width: 700px) {
+  [dir="rtl"] .nav {
+    text-align: right;
+    align-items: flex-end;
+  }
+  
+  [dir="rtl"] .footer-inner {
+    text-align: center;
+  }
+  
+  [dir="rtl"] .footer-brand,
+  [dir="rtl"] .footer-links,
+  [dir="rtl"] .footer-contact {
+    text-align: center;
+  }
+  
+  [dir="rtl"] .about-features {
+    justify-content: center;
+  }
+}
+
+/* --- Language Switch Button --- */
+.lang-switch {
+  padding: 0.4rem 0.8rem;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.lang-switch:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+[dir="rtl"] .lang-switch {
+  font-family: var(--font-body);
+}
